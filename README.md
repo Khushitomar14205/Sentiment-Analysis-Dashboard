@@ -65,7 +65,7 @@ Logistic Regression
 
 ## ▶️ How to Run Locally
 1. Clone the repository
-git clone https://github.com/your-username/sentiment-dashboard.git
+git clone https://github.com/Khushitomar14205/sentiment-dashboard.git
 
  2.Navigate to project folder
 cd sentiment-dashboard
