@@ -161,8 +161,11 @@ if st.button("Analyze Reddit Sentiment"):
         st.write("### Results:")
         total = results["Positive"] + results["Negative"]
 
-        pos_percent = (results["Positive"] / total) * 100
-        neg_percent = (results["Negative"] / total) * 100
+        if total==0:
+            st.error("No data available for this topic. Try another keyword.")
+        else:
+           pos_percent = (results["Positive"] / total) * 100
+           neg_percent = (results["Negative"] / total) * 100
 
         st.subheader("📊 Sentiment Summary")
         col1, col2 = st.columns(2)
