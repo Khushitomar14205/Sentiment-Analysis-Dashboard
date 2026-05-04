@@ -155,7 +155,7 @@ if st.button("Analyze Reddit Sentiment"):
            else:
              st.error(f"😠 {post} ({conf:.1f}%)")
         
-
+         # --------  REDDIT RESULT BOX --------
         results = analyze_posts(posts)
 
         st.write("### Results:")
@@ -167,23 +167,29 @@ if st.button("Analyze Reddit Sentiment"):
            pos_percent = (results["Positive"] / total) * 100
            neg_percent = (results["Negative"] / total) * 100
 
-        st.subheader("📊 Sentiment Summary")
-        col1, col2 = st.columns(2)
+           st.subheader("📊 Sentiment Summary")
+           col1, col2 = st.columns(2)
 
-        with col1:
-           st.metric("😊 Positive", f"{results['Positive']} ({pos_percent:.1f}%)")
-        with col2:
-             st.metric("😠 Negative", f"{results['Negative']} ({neg_percent:.1f}%)")
+           with col1:
+              st.metric("😊 Positive", f"{results['Positive']} ({pos_percent:.1f}%)")
+           with col2:
+              st.metric("😠 Negative", f"{results['Negative']} ({neg_percent:.1f}%)")
            
 
-        # Chart
-        import plotly.graph_objects as go
+           # Chart
+           import plotly.graph_objects as go
 
-        labels = list(results.keys())
-        values = list(results.values())
+           labels = list(results.keys())
+           values = list(results.values())
 
-        fig = go.Figure(data=[go.Bar(x=labels, y=values)])
-        st.plotly_chart(fig)
+           fig = go.Figure(data=[go.Bar(x=labels, y=values)])
+           st.plotly_chart(fig)
+
+           # interpretation
+           if pos_percent> neg_percent:
+               st.success("Overall sentiment is Positive 😊")
+           else:
+               st.error("Overall sentiment is Negative 😠")
 
     else:
         st.warning("Enter a topic")
