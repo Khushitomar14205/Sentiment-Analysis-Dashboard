@@ -60,7 +60,7 @@ Logistic Regression
 (images/reddit_analysis.png)
 
 ### 📊 Visualization
-![Chart](images/text_analysis)chart.png)
+![Chart](images/text_analysis_chart.png)
 (images/reddit_analysis_chart.png)
 
 ▶️ How to Run Locally
