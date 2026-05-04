@@ -41,7 +41,7 @@ def get_reddit_posts(topic, limit=20):
         response = requests.get(url, headers=headers, timeout=10)
 
         if response.status_code != 200:
-            return []
+            raise Exception("Bad response")
 
         data = response.json()
 
@@ -51,8 +51,16 @@ def get_reddit_posts(topic, limit=20):
 
         return posts
 
-    except Exception as e:
-        return []
+    except :
+        # fallback data
+        st.warning("Live Reddit data unavailable, showing sample data.")
+        return [
+            f"{topic} is amazing",
+            f"I hate {topic}",
+            f"{topic} is overrated",
+            f"{topic} is the future",
+            f"Why is {topic} so popular?"
+        ]
 
 def analyze_posts(posts):
     results = {"Positive": 0, "Negative": 0}
