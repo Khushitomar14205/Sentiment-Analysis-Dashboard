@@ -67,7 +67,7 @@ Logistic Regression
 1. Clone the repository
 git clone https://github.com/your-username/sentiment-dashboard.git
 
-2.Navigate to project folder
+ 2.Navigate to project folder
 cd sentiment-dashboard
 
 3. Install dependencies
