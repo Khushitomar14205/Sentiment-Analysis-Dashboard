@@ -1,7 +1,6 @@
 import streamlit as st
 import pickle
 import re
-import matplotlib.pyplot as plt
 import requests
 
 # Load model
@@ -28,21 +27,32 @@ def clean_text(text):
     text = re.sub(r"[^a-zA-Z\s]", "", text)
     return text
 
-@st.cache_data
+
+import requests
+
 def get_reddit_posts(topic, limit=20):
     url = f"https://www.reddit.com/search.json?q={topic}&limit={limit}"
-    
-    headers = {"User-Agent": "sentiment-app"}
-    
-    response = requests.get(url, headers=headers)
-    data = response.json()
-    
-    posts = []
-    
-    for item in data["data"]["children"]:
-        posts.append(item["data"]["title"])
-    
-    return posts
+
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+    }
+
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+
+        if response.status_code != 200:
+            return []
+
+        data = response.json()
+
+        posts = []
+        for item in data.get("data", {}).get("children", []):
+            posts.append(item["data"]["title"])
+
+        return posts
+
+    except Exception as e:
+        return []
 
 def analyze_posts(posts):
     results = {"Positive": 0, "Negative": 0}
