@@ -56,12 +56,12 @@ Logistic Regression
 ![Home](images/text_analysis.png)
 
 ### 🌐 Reddit Sentiment Analysis
-![Reddit](images/reddit.png)
-(images/reddit_analysis.png)
+![Reddit](images/reddit.png) 
+![](images/reddit_analysis.png)
 
 ### 📊 Visualization
 ![Chart](images/text_analysis_chart.png)
-(images/reddit_analysis_chart.png)
+![](images/reddit_analysis_chart.png)
 
 ▶️ How to Run Locally
 # Clone the repository
