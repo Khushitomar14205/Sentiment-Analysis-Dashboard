@@ -1,11 +1,11 @@
-📊 Sentiment Analysis Dashboard
+##📊 Sentiment Analysis Dashboard
 
 A web-based interactive dashboard that performs sentiment analysis on user input and real-time Reddit data, providing insights through visualizations and confidence scores.
 
-🌍 Live Demo
+##🌍 Live Demo
 https://sentiment-analysis-dashboard-drkfxaa2wh8gqmh3w8wha2.streamlit.app/
 
-🚀 Features
+##🚀 Features
 
 1. 🧠 Text Sentiment Analysis
 i. Enter custom text and get sentiment (Positive/Negative)
@@ -27,7 +27,7 @@ ii. Metrics and progress indicators
 i. Uses caching/session handling to avoid redundant API calls
 ii. Smooth UI with loading indicators
 
-🛠️ Tech Stack
+##🛠️ Tech Stack
 
 1. Frontend/UI: Streamlit
 2. Machine Learning: Scikit-learn (Logistic Regression)
@@ -36,7 +36,7 @@ ii. Smooth UI with loading indicators
 5. Visualization: Plotly
 6. Backend: Python
    
-🧠 Model Details
+##🧠 Model Details
 
 1. Dataset: Twitter Sentiment Dataset (~1.6M tweets)
 2. Preprocessing:
@@ -63,27 +63,27 @@ Logistic Regression
 ![Chart](images/text_analysis_chart.png)
 ![](images/reddit_analysis_chart.png)
 
-▶️ How to Run Locally
-# Clone the repository
+##▶️ How to Run Locally
+1. Clone the repository
 git clone https://github.com/your-username/sentiment-dashboard.git
 
-# Navigate to project folder
+2.Navigate to project folder
 cd sentiment-dashboard
 
-# Install dependencies
+3. Install dependencies
 pip install -r requirements.txt
 
-# Run the app
+4. Run the app
 streamlit run app.py
 
-📌 Future Improvements
+##📌 Future Improvements
 
 1. Multi-class sentiment (Positive / Neutral / Negative)
 2. Emotion detection (Happy, Angry, Sad, etc.)
 3. Integration with Twitter/X API
 4. Time-based sentiment trends
 
-💡 Project Highlights
+##💡 Project Highlights
 
 1. End-to-end ML pipeline (data → model → deployment)
 2. Real-time data integration
