@@ -50,6 +50,19 @@ Logistic Regression
 4. Accuracy:
 ~78–80%
 
+## 📸 Screenshots
+
+### 🧠 Text Sentiment Analysis
+![Home](images/text_analysis.png)
+
+### 🌐 Reddit Sentiment Analysis
+![Reddit](images/reddit.png)
+(images/reddit_analysis.png)
+
+### 📊 Visualization
+![Chart](images/text_analysis)chart.png)
+(images/reddit_analysis_chart.png)
+
 ▶️ How to Run Locally
 # Clone the repository
 git clone https://github.com/your-username/sentiment-dashboard.git
